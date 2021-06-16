@@ -3,7 +3,7 @@ import styled from 'styled-components'
 export const Wrapper = styled.div `
 display: flex;
 flex-wrap: wrap;
-    width: 100%;
+    width: 50%;
     margin: 15px auto;
 
     div {
@@ -16,8 +16,14 @@ flex-wrap: wrap;
     }
 `;
 export const CardFace = styled.div `
-    border: 1px solid blue;
+    img {
+        width: 50%;
+        height: 100%;
+    }
 `;
 export const CardBack = styled.div `
-border: 1px solid blue;
+    img {
+        width: 50%;
+        height: 100%;
+    }
 `;
