@@ -1,10 +1,14 @@
 import { useState } from "react";
-import { Wrapper } from "../styles";
+import { Reset, Wrapper } from "../styles";
+/* Component */
 import Items from './Items'
+/*  */
 import cardsData from "../Cards"
 
-cardsData.sort(() => Math.random() - Math.random()).find(() => true);
+cardsData.sort(() => Math.random() - Math.random());
+
 function Grid() {
+
     /* Add useState and mod. */
     const [cards, setCards] = useState(cardsData)
     const [firstClick, setFirstClick] = useState(null);
@@ -18,20 +22,29 @@ function Grid() {
                 setFirstClick(null);
                 console.log('match')
             }else {
-                firstClick.status = false
+                
                 card.status = false
+                firstClick.status = false;
                 setFirstClick(null);
                 console.log('not match')
             }
         }
-        
     } 
-
+    const handleClick = () => {
+        const update = cards.map(el => (el.status===true? {...el, status: false}: el));
+        update.sort(() => Math.random() - Math.random())
+        setFirstClick(null);
+        setCards(update)
+    }
 
     return (
+        <div>
         <Wrapper>
             {cards.map(card => (<Items card={card} checkClick={checkClick} status={card.status}/>))}
         </Wrapper>
+        <Reset onClick={handleClick}>Reset</Reset>
+        </div>
+
         
     )
 }
