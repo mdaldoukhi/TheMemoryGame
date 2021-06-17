@@ -18,7 +18,7 @@ function Items(props) {
     return (  
         <ReactCardFlip isFlipped={props.card.status} flipDirection="horizontal" >
         <CardFace onClick={handleClick} cardName={props.card.name}>
-          <img src="https://cdn.shopify.com/s/files/1/0200/7616/products/playing-cards-aviator-1_1024x1024.png?v=1530155012"/>
+          <img src="https://i.pinimg.com/originals/85/78/7f/85787fa1961115bc240ed5814bbd98df.png"/>
         </CardFace>
         <CardBack >
         <img src={props.card.image}/>
