@@ -1,5 +1,5 @@
 body {
-  background-color: #222;
+  font-family: 'Gaegu', cursive; /* Google's Fonts */
 }
 .App {
   text-align: center;

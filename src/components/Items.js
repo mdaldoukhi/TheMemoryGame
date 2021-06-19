@@ -17,11 +17,10 @@ function Items(props) {
     /* Return to Grip the cards  */
     return (  
         <ReactCardFlip isFlipped={props.card.status} flipDirection="horizontal" >
-        <CardFace onClick={handleClick} cardName={props.card.name}>
-          <img src="https://i.pinimg.com/originals/85/78/7f/85787fa1961115bc240ed5814bbd98df.png"/>
+        <CardFace onClick={handleClick} cardName={props.card.name} >
         </CardFace>
-        <CardBack >
-        <img src={props.card.image}/>
+        <CardBack className={props.card.match}>
+        <img src={props.card.image} alt={props.card.name}/>
         </CardBack>
       </ReactCardFlip>
     )
