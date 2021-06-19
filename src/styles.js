@@ -60,6 +60,9 @@ export const Score = styled.h2 `
         color: #02ccba
     }  
 `;
+export const Timer = styled.h2 `
+    text-align: center;
+`;
 /* End Grid */
 
 /* Start Item */

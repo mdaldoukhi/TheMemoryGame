@@ -12,7 +12,7 @@ function Items(props) {
     const handleClick = () => {
         setIsFlipped(!isFlipped)
         props.card.status = true
-        setTimeout(() => {props.checkClick(props.card)}, 700);     
+        setTimeout(() => {props.checkClick(props.card)}, 700);
   }
     /* Return to Grip the cards  */
     return (  
