@@ -16,7 +16,7 @@ export const Wrapper = styled.div `
     display: flex;
     flex-wrap: wrap;
     width: 650px;
-    margin: 10px auto;
+    margin: 15px auto;
     text-align:center;
 	background: linear-gradient(160deg, #02ccba 0%, #aa7ecd 100%);
 	padding: 1rem;
@@ -52,7 +52,7 @@ export const Reset = styled.button `
 `;
 export const Failed = styled.h2 `
     span {
-        color: #9f81c8
+        color: #FF0000
     }
 `;
 export const Score = styled.h2 `

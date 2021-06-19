@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: url('https://raw.githubusercontent.com/efectusmagnus/memory-game/master/img/geometry2.png');
 }
 
 code {
