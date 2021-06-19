@@ -1,8 +1,8 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Failed, Reset, Score, Timer, Tools, Wrapper } from "../styles";
 /* Component */
 import Items from "./Items";
-/*  */
+/* Data */
 import cardsData from "../Cards";
 
 cardsData.sort(() => Math.random() - Math.random());
@@ -22,7 +22,7 @@ function Grid() {
     setStart(true); //to start up the timer
     if (firstClick === null) {
       setFirstClick(card); // setup the first click
-    } 
+    }
     /* check if the cards are equal  */
     else {
       if (firstClick.name === card.name) {
@@ -41,24 +41,42 @@ function Grid() {
     }
   };
   /* Timer Function  */
-  if (start === true) {
-    const checkStatus = cards.every((card) => card.status === true);
-    if (checkStatus === false) {
-      if (second < 60) {
-        setTimeout(() => setSecond(second + 1), 1000);
+  // if (start === true) {
+  //   const checkStatus = cards.every((card) => card.status === true);
+  //   if (checkStatus === false) {
+  //     if (second < 60) {
+  //       setTimeout(() => setSecond(second + 1), 1000);
+  //     } else {
+  //       setMins(0);
+  //       setMins(mins + 1);
+  //       setSecond(0);
+  //     }
+  //   } else {
+  //     setSecond(second);
+  //     setStart(false);
+  //   }
+  // }
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      const checkStatus = cards.every((card) => card.status === true)
+      if (checkStatus === false) {
+        if (second < 59) {
+          setSecond(second + 1)
+          setStart(true)
+        } else {
+          setMins(0);
+          setMins(mins + 1);
+          setSecond(0);
+        }
       } else {
-        setMins(0);
-        setMins(mins + 1);
-        setSecond(0);
+        setSecond(second);
+        setStart(true);
       }
-    } else {
-      setSecond(second);
-      setStart(false);
-    }
-  }
+    }, 1000);
+    return () => clearInterval(intervalId);
+  }, [second]);
   /* Restart Function */
   const handleClick = () => {
-    setSecond(0);
     const update = cards.map((el) =>
       el.status === true ? { ...el, status: false, match: "not-match" } : el
     );
@@ -69,13 +87,14 @@ function Grid() {
     setScore(0);
     setStart(false);
     setMins(0);
+    setSecond(0);
   };
   /* chcek if the seconds are mins < 10 add 0 on the fist */
   const zeroSecond = () => {
     return second < 10 ? `0${second}` : second;
   };
   const zeroMins = () => {
-    return mins < 10 ? `0${mins / 4}` : mins / 4;
+    return mins < 10 ? `0${mins}` : mins;
   };
   return (
     <div>
