@@ -1,11 +1,11 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Failed, Reset, Score, Timer, Tools, Wrapper } from "../styles";
 /* Component */
 import Items from "./Items";
 /*  */
 import cardsData from "../Cards";
 
-//cardsData.sort(() => Math.random() - Math.random());
+cardsData.sort(() => Math.random() - Math.random());
 
 function Grid() {
   /* Declears States */
