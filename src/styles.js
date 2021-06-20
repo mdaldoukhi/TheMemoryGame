@@ -1,4 +1,57 @@
 import styled from 'styled-components'
+/* First message for the user contain [button to start] and [paragraph] */
+export const StartBtn = styled.span `
+    position: relative;
+    display: inline-flex;
+    width: 88%;
+    height: 55px;
+    perspective: 1000px;
+    justify-content: center;
+    margin: 100px 0;
+    a{
+    font-size: 19px;
+    letter-spacing: 1px;
+    transform-style: preserve-3d;
+    transform: translateZ(-25px);
+    transition: transform .25s;
+    font-family: 'Montserrat', sans-serif;
+    }
+    a:before,
+    a:after{
+    position: absolute;
+    content: "BUTTON";
+    height: 55px;
+    width: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 5px solid black;
+    box-sizing: border-box;
+    border-radius: 5px;
+    }
+    a:before{
+    color: #fff;
+    background: #000;
+    transform: rotateY(0deg) translateZ(25px);
+    }
+    a:after{
+    color: #000;
+    transform: rotateX(90deg) translateZ(25px);
+    }
+    a:hover{
+    transform: translateZ(-25px) rotateX(-90deg);
+    }
+    &.true{display:none}
+`;
+export const Note = styled.p `
+    margin: auto;
+    width: 45%;
+    line-height: 1.7;
+    font-size: 20px;
+    font-weight: bold;
+    color: #02ccba
+`;
+/* End */
 
 /* Start header */
 export const Header = styled.h1 `
