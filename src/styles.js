@@ -49,11 +49,17 @@ export const Note = styled.p `
     margin: auto;
     width: 45%;
     line-height: 1.7;
-    font-size: 23px;
+    font-size: 25px;
     font-weight: bold;
     color: #02ccba;
     font-family: Copperplate;
     text-align: center;
+    span{
+        color: red;
+        display: inline-block;
+        font-weight: bold;
+        font-size: 35px;
+    }
 `;
 /* End */
 

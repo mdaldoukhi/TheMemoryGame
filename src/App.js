@@ -19,7 +19,7 @@ function App() {
       <Grid />
     ) : (
       <Note>
-        Please Click Button To start the game, and notice when you click the
+        <span>*</span>Please Click Button To start the game, and notice when you click the
         button timer will start count
       </Note>
     );
