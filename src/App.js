@@ -28,7 +28,7 @@ function App() {
     <div>
       <Header>The Memory Game</Header>
       <StartBtn onClick={handleClick} className={view}>
-        <a> </a>
+        <i> </i>
       </StartBtn>
       {show()}
     </div>

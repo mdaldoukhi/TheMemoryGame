@@ -9,7 +9,7 @@ export const StartBtn = styled.span `
     perspective: 1000px;
     justify-content: center;
     margin: 100px 0;
-    a{
+    i{
     cursor: pointer;
     font-size: 19px;
     letter-spacing: 1px;
@@ -18,8 +18,8 @@ export const StartBtn = styled.span `
     transition: transform .25s;
     font-family: 'Montserrat', sans-serif;
     }
-    a:before,
-    a:after{
+    i:before,
+    i:after{
     position: absolute;
     content: "START";
     height: 55px;
@@ -31,16 +31,16 @@ export const StartBtn = styled.span `
     box-sizing: border-box;
     border-radius: 5px;
     }
-    a:before{
+    i:before{
     color: #fff;
     background: #000;
     transform: rotateY(0deg) translateZ(25px);
     }
-    a:after{
+    i:after{
     color: #000;
     transform: rotateX(90deg) translateZ(25px);
     }
-    a:hover{
+    i:hover{
     transform: translateZ(-25px) rotateX(-90deg);
     }
     &.true{display:none}
