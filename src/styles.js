@@ -20,7 +20,7 @@ export const StartBtn = styled.span `
     a:before,
     a:after{
     position: absolute;
-    content: "BUTTON";
+    content: "START";
     height: 55px;
     width: 180px;
     display: flex;
