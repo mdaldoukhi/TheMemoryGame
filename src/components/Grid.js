@@ -18,11 +18,9 @@ function Grid() {
   const [firstClick, setFirstClick] = useState(null);
   const [second, setSecond] = useState(0);
   const [mins, setMins] = useState(0);
-  const [start, setStart] = useState(false);
 
   /* Functoin that check the clicker */
   const checkClick = (card) => {
-    setStart(true); //to start up the timer
     if (firstClick === null) {
       setFirstClick(card); // setup the first click
     }
@@ -50,7 +48,6 @@ function Grid() {
       if (checkStatus === false) {
         if (second < 59) {
           setSecond(second + 1)
-          setStart(true)
         } else {
           setMins(0);
           setMins(mins + 1);
@@ -58,11 +55,10 @@ function Grid() {
         }
       } else {
         setSecond(second);
-        setStart(true);
       }
     }, 1000);
     return () => clearInterval(intervalId);
-  }, [second]);
+  }, [second, mins, cards]);
   /* Restart Function */
   const handleClick = () => {
     const update = cards.map((el) =>
@@ -73,7 +69,6 @@ function Grid() {
     setCards(update);
     setFailed(0);
     setScore(0);
-    setStart(false);
     setMins(0);
     setSecond(0);
   };
