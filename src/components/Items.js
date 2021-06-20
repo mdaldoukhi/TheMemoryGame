@@ -1,3 +1,4 @@
+/* Styled-component */
 import { CardBack, CardFace, } from "../styles";
 /* Global  */
 import { useState } from "react";

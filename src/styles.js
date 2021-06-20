@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+
 /* First message for the user contain [button to start] and [paragraph] */
 export const StartBtn = styled.span `
     position: relative;

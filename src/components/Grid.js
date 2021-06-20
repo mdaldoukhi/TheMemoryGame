@@ -1,10 +1,13 @@
+/* Global React */
 import { useState, useEffect } from "react";
+/* Styled-component */
 import { Failed, Reset, Score, Timer, Tools, Wrapper } from "../styles";
 /* Component */
 import Items from "./Items";
 /* Data */
 import cardsData from "../Cards";
 
+/* Shuffle the object */
 cardsData.sort(() => Math.random() - Math.random());
 
 function Grid() {
@@ -56,6 +59,7 @@ function Grid() {
   //     setStart(false);
   //   }
   // }
+  /* Timer Function */
   useEffect(() => {
     const intervalId = setInterval(() => {
       const checkStatus = cards.every((card) => card.status === true)
