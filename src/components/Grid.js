@@ -43,22 +43,6 @@ function Grid() {
       }
     }
   };
-  /* Timer Function  */
-  // if (start === true) {
-  //   const checkStatus = cards.every((card) => card.status === true);
-  //   if (checkStatus === false) {
-  //     if (second < 60) {
-  //       setTimeout(() => setSecond(second + 1), 1000);
-  //     } else {
-  //       setMins(0);
-  //       setMins(mins + 1);
-  //       setSecond(0);
-  //     }
-  //   } else {
-  //     setSecond(second);
-  //     setStart(false);
-  //   }
-  // }
   /* Timer Function */
   useEffect(() => {
     const intervalId = setInterval(() => {
