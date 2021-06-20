@@ -10,6 +10,7 @@ export const StartBtn = styled.span `
     justify-content: center;
     margin: 100px 0;
     a{
+    cursor: pointer;
     font-size: 19px;
     letter-spacing: 1px;
     transform-style: preserve-3d;
@@ -48,17 +49,19 @@ export const Note = styled.p `
     margin: auto;
     width: 45%;
     line-height: 1.7;
-    font-size: 20px;
+    font-size: 23px;
     font-weight: bold;
-    color: #02ccba
+    color: #02ccba;
+    font-family: Copperplate;
+    text-align: center;
 `;
 /* End */
 
 /* Start header */
 export const Header = styled.h1 `
-	font-family: 'Gaegu', cursive;
+	font-family: Copperplate;
 	font-weight: 600;
-	font-size: 2.3em;
+	font-size: 3em;
 	text-align: center;
 	color: #9f81c8;
     
@@ -105,17 +108,24 @@ export const Reset = styled.button `
 }
 `;
 export const Failed = styled.h2 `
+    font-family: Copperplate;
+    font-size: 2rem;
     span {
         color: #FF0000
     }
 `;
 export const Score = styled.h2 `
+    font-family: Copperplate;
+    font-size: 2rem;
       span {
         color: #02ccba
     }  
 `;
 export const Timer = styled.h2 `
     text-align: center;
+    font-family: Copperplate;
+	font-size: 3em;
+    margin: 15px;
 `;
 /* End Grid */
 

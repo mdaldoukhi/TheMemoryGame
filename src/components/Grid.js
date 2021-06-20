@@ -86,6 +86,9 @@ function Grid() {
   };
   return (
     <div>
+      <Timer>
+        Timer: {zeroMins()} : {zeroSecond()}
+      </Timer>
       <Tools>
         <Failed>
           Failed: <span>{failed}</span>
@@ -105,9 +108,7 @@ function Grid() {
           <Items card={card} checkClick={checkClick} status={card.status} />
         ))}
       </Wrapper>
-      <Timer>
-        Timer: {zeroMins()} : {zeroSecond()}
-      </Timer>
+
     </div>
   );
 }
