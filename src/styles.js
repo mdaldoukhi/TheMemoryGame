@@ -44,6 +44,10 @@ export const StartBtn = styled.span `
     transform: translateZ(-25px) rotateX(-90deg);
     }
     &.true{display:none}
+    @media (max-width: 768px) {
+    
+        margin: 55px -55px;
+  }
 `;
 export const Note = styled.p `
     margin: auto;
@@ -60,6 +64,10 @@ export const Note = styled.p `
         font-weight: bold;
         font-size: 35px;
     }
+    @media (max-width: 768px) {
+    font-size: 2em;
+    width: 100%
+  }
 `;
 /* End */
 
@@ -70,7 +78,10 @@ export const Header = styled.h1 `
 	font-size: 3em;
 	text-align: center;
 	color: #9f81c8;
-    
+    @media (max-width: 768px) {
+    margin: 30px;
+    font-size: 2em;
+  }
 `;
 /* End header */
 
@@ -97,8 +108,10 @@ export const Wrapper = styled.div `
         }
     }
     @media (max-width: 768px) {
-    width: 100%;
-    margin:0 auto;
+    width: 90%;
+	padding: 10px; 
+    background: none;
+	box-shadow:none;
     div {
         width: 25%;
 	    height: 5.5rem;
@@ -144,6 +157,10 @@ export const Timer = styled.h2 `
     font-family: Copperplate;
 	font-size: 3em;
     margin: 15px;
+    @media (max-width: 768px) {
+    margin: 0;
+    font-size: 2em;
+  }
 `;
 /* End Grid */
 
