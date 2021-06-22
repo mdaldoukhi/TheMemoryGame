@@ -96,6 +96,15 @@ export const Wrapper = styled.div `
             height: 100%;
         }
     }
+    @media (max-width: 768px) {
+    width: 100%;
+    margin:0 auto;
+    div {
+        width: 25%;
+	    height: 5.5rem;
+        margin: 0;
+    }
+  }
 `;
 export const Tools = styled.div `
 position: relative;
@@ -103,6 +112,9 @@ width: 650px;
 margin: auto;
 display: flex;
 justify-content: space-between;
+@media (max-width: 768px) {
+    width: 100%;
+  }
 `;
 export const Reset = styled.button `
     background-color: transparent;
